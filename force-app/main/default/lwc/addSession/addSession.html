@@ -1,0 +1,27 @@
+<template>
+    <header class="slds-modal__header">
+        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={handleCancel}>
+            <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                <use xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+            </svg>
+            <span class="slds-assistive-text">Close</span>
+        </button>
+        <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Create new session</h2>
+    </header>
+        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <lightning-input type="text" label="Name" placeholder="Name" onchange={handleNameInput} required></lightning-input>
+            <c-search-component label-name="Speaker 1" onlookup={handleLookup} id="1">
+            </c-search-component>
+            <c-search-component label-name="Speaker 2" onlookup={handleLookup} id="2">
+            </c-search-component>
+            <lightning-combobox label="Location" value={locationValue} placeholder="Select Location" options={locations} onchange={handleLocationChange} required></lightning-combobox>
+            <lightning-input label="Date and Time" name="DateTime" type="datetime" onchange={handleDateTimeInput} required></lightning-input>
+            <lightning-input type="text" label="Description" onchange={handleDescriptionInput}></lightning-input>
+        </div>
+    <footer class="slds-modal__footer">
+        <div>
+            <lightning-button variant="base" label="Cancel" onclick={handleCancel} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand" label="Save" onclick={handleSave} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </footer>
+</template>

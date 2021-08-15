@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>SessionController</members>
+		<members>SessionControllerTest</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>Contact.Picture_URL__c</members>
+		<members>Session_Speaker__c.Session__c</members>
+		<members>Session_Speaker__c.Speaker__c</members>
+		<members>Session__c.Date_and_Time__c</members>
+		<members>Session__c.Description__c</members>
+		<members>Session__c.Room__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>Contact</members>
+		<members>Session_Speaker__c</members>
+		<members>Session__c</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>Contact-Contact Layout</members>
+		<members>Session_Speaker__c-Session Speaker Layout</members>
+		<members>Session__c-Session Layout</members>
+		<name>Layout</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>LightningComponentBundle</name>
+	</types>
+	<version>51.0</version>
+</Package>
